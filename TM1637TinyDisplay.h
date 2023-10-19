@@ -30,8 +30,9 @@
 #elif defined(ESP8266) || defined(ESP32)
 #include <pgmspace.h>
 #else
-#define pgm_read_byte(addr)                                                    \
-  (*(const unsigned char *)(addr)) // workaround for non-AVR
+// #define pgm_read_byte(addr)                                                    \
+//  (*(const unsigned char *)(addr)) // workaround for non-AVR
+#include <pgmspace.h>
 #endif
 
 #define SEG_A   0b00000001
